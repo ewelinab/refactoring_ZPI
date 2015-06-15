@@ -1,0 +1,67 @@
+package refactoring_lab;
+
+public class AmicableSum {
+	
+	public static void main(String[] args)
+	{
+
+			int i;
+			int n = 10000;
+			int suma = 0;
+			
+			{
+				for(i = 1; i <= n-1; i++ )
+				{
+					if(isAmicable(i) == true)
+					{
+						suma += i;
+						System.out.println(i);
+					}
+				}
+			}
+			
+			System.out.println(suma);
+	
+		
+	}
+	
+	public static boolean isAmicable(int n)
+	{
+		int suma1 = getDivisionSum(n);
+		if(suma1 == n)
+		{
+			return false;
+		}
+		int suma2 = getDivisionSum(suma1);
+		
+		if(suma2 == n)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+	
+	
+	public static int getdivisionsum(int n)
+	{
+		int i;
+		int suma1 = 0;
+	
+		
+		{
+			for(i = 1; i <= n-1; i++ )
+			{
+				if(n % i == 0)
+				{
+					suma1 += i;
+				}
+			}
+			return suma1;			
+		}
+			
+	}
+
+}
