@@ -2,6 +2,12 @@ package refactoring_lab;
 
 public class AmicableSum
 {
+	/**
+     * Calculates the sum of all the amicable numbers (from 1 to rangeMaxNumber).
+     * 220 + 284 + ... + 6368 = 31626
+     * @param rangeMaxNumber - boundary value of numbers(in this case: 10000)
+     * @return sum of amicable numbers (from 1 to boundary value)
+     */
 
 	public static void main(String[] args)
 	{
